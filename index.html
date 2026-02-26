@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammed Adheen | Software Engineer</title>
+  <meta name="description" content="Mohammed Adheen – Software Engineer specializing in Python, Odoo, Django, React and backend development. Explore my projects, skills, and experience." />
+  <meta name="keywords" content="Mohammed Adheen, Software Engineer, Python, Odoo, Django, React, Docker, Backend Developer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Particle Background -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>adheen<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">
+          <span class="greeting-line"></span>
+          Hi there, I'm
+        </p>
+        <h1 class="hero-name">
+          <span class="name-line">Mohammed</span>
+          <span class="name-line accent">Adheen</span>
+        </h1>
+        <div class="hero-roles">
+          <span class="role-prefix">I'm a </span>
+          <span class="role-rotator" id="roleRotator">Software Engineer</span>
+        </div>
+        <p class="hero-bio">
+          Passionate about building scalable applications with Python.
+          Specializing in <strong>Odoo development</strong> and crafting
+          efficient backend solutions. Always learning, always growing.
+        </p>
+        <div class="hero-quote">
+          <i class="fas fa-quote-left"></i>
+          <em>"Code is like humor. When you have to explain it, it's bad." – Cory House</em>
+        </div>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Get In Touch
+          </a>
+          <a href="#projects" class="btn btn-secondary">
+            <i class="fas fa-code"></i> View Projects
+          </a>
+          <a href="https://www.linkedin.com/in/mohammed-adheen" target="_blank" class="btn btn-outline">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+        <div class="hero-social">
+          <a href="https://github.com/Adheenka" target="_blank" class="social-icon" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mohammed-adheen" target="_blank" class="social-icon" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:adheen9961@gmail.com" class="social-icon" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="avatar-ring">
+          <div class="avatar-ring-inner">
+            <img src="https://avatars.githubusercontent.com/u/Adheenka" 
+                 onerror="this.src='https://github.com/Adheenka.png'" 
+                 alt="Mohammed Adheen" 
+                 class="avatar-img" 
+                 id="heroAvatar" />
+          </div>
+          <div class="ring-orbit ring-orbit-1">
+            <div class="orbit-dot" style="--orbit-icon: '🐍'">
+              <span>🐍</span>
+            </div>
+          </div>
+          <div class="ring-orbit ring-orbit-2">
+            <div class="orbit-dot" style="--orbit-icon: '⚙️'">
+              <span>⚙️</span>
+            </div>
+          </div>
+          <div class="ring-orbit ring-orbit-3">
+            <div class="orbit-dot" style="--orbit-icon: '🐳'">
+              <span>🐳</span>
+            </div>
+          </div>
+        </div>
+        <div class="status-badge">
+          <span class="status-dot"></span> Open to opportunities
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 01. about me</span>
+        <h2 class="section-title">Who Am I?</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-col">
+          <div class="about-img-wrapper">
+            <img src="https://github.com/Adheenka.png" alt="Mohammed Adheen" class="about-img" />
+            <div class="about-img-bg"></div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number">23+</span>
+              <span class="stat-label">Repositories</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Years Coding</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Tech Stack</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text-col">
+          <p class="about-intro">
+            Hey! I'm <strong>Mohammed Adheen</strong>, a Software Engineer based in <strong>India</strong> 🇮🇳, 
+            passionate about building scalable applications with Python.
+          </p>
+          <p>
+            I specialize in <strong>Odoo development</strong> and love crafting efficient backend solutions. 
+            My journey in software development started with a curiosity to understand how things work 
+            under the hood, and it has grown into a deep passion for building robust systems.
+          </p>
+          <p>
+            Currently, I'm working on Python-based projects and expanding my expertise in 
+            <strong>Django</strong>, <strong>Docker</strong>, and <strong>React</strong>. I believe in 
+            writing clean, maintainable code and building solutions that make a real difference.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-rocket"></i>
+              <span>Currently working on Python-based projects</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-leaf"></i>
+              <span>Learning Django, Docker & React</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-comments"></i>
+              <span>Ask me about Python, Odoo, or backend development</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-envelope"></i>
+              <span>Reach me at <a href="mailto:adheen9961@gmail.com">adheen9961@gmail.com</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 02. tech stack</span>
+        <h2 class="section-title">Skills & Tools</h2>
+      </div>
+      <div class="skills-grid">
+        <!-- Languages -->
+        <div class="skill-category">
+          <h3 class="skill-cat-title"><i class="fas fa-code"></i> Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="90"><i class="fab fa-python"></i> Python</span>
+            <span class="skill-tag" data-level="75"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="skill-tag" data-level="70"><i class="fab fa-html5"></i> HTML</span>
+            <span class="skill-tag" data-level="65"><i class="fab fa-css3-alt"></i> CSS</span>
+          </div>
+        </div>
+        <!-- Backend -->
+        <div class="skill-category">
+          <h3 class="skill-cat-title"><i class="fas fa-server"></i> Backend & Frameworks</h3>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="85"><i class="fas fa-cog"></i> Odoo</span>
+            <span class="skill-tag" data-level="80"><i class="fas fa-leaf"></i> Django</span>
+            <span class="skill-tag" data-level="70"><i class="fas fa-bolt"></i> FastAPI</span>
+            <span class="skill-tag" data-level="65"><i class="fas fa-network-wired"></i> REST APIs</span>
+          </div>
+        </div>
+        <!-- Frontend -->
+        <div class="skill-category">
+          <h3 class="skill-cat-title"><i class="fas fa-palette"></i> Frontend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="70"><i class="fab fa-react"></i> React</span>
+            <span class="skill-tag" data-level="65"><i class="fas fa-wind"></i> Tailwind CSS</span>
+            <span class="skill-tag" data-level="60"><i class="fas fa-layer-group"></i> Redux</span>
+          </div>
+        </div>
+        <!-- DevOps & Tools -->
+        <div class="skill-category">
+          <h3 class="skill-cat-title"><i class="fas fa-tools"></i> DevOps & Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="80"><i class="fab fa-docker"></i> Docker</span>
+            <span class="skill-tag" data-level="85"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="skill-tag" data-level="80"><i class="fab fa-github"></i> GitHub</span>
+            <span class="skill-tag" data-level="70"><i class="fas fa-database"></i> PostgreSQL</span>
+            <span class="skill-tag" data-level="65"><i class="fas fa-terminal"></i> Linux/Bash</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Bars -->
+      <div class="skill-bars" id="skillBars">
+        <div class="skill-bar-item">
+          <div class="skill-bar-header">
+            <span>Python & Odoo</span><span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header">
+            <span>Django / Backend</span><span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header">
+            <span>React / Frontend</span><span class="skill-pct">70%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header">
+            <span>Docker & DevOps</span><span class="skill-pct">78%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header">
+            <span>Git & Version Control</span><span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 03. projects</span>
+        <h2 class="section-title">What I've Built</h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card" data-category="odoo">
+          <div class="project-card-top">
+            <div class="project-icon"><i class="fas fa-trash-alt"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Adheenka/waste_mangement_demo" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Waste Management Demo</h3>
+          <p class="project-desc">
+            An Odoo module extending <code>sale.order</code> for waste management. Adds fields 
+            and actions for scheduling pickups and dumping waste, including an XLSX report wizard.
+          </p>
+          <div class="project-tags">
+            <span>Python</span><span>Odoo</span><span>XML</span><span>XLSX</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="backend">
+          <div class="project-card-top">
+            <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Adheenka/moh_dashboard" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">MOH Dashboard</h3>
+          <p class="project-desc">
+            A backend-powered dashboard project built with Python. Provides data visualization 
+            and management capabilities for efficient reporting and analytics.
+          </p>
+          <div class="project-tags">
+            <span>Python</span><span>Dashboard</span><span>Backend</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="full-stack">
+          <div class="project-card-top">
+            <div class="project-icon"><i class="fas fa-film"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Adheenka/movie-app" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Movie App</h3>
+          <p class="project-desc">
+            A Python-based movie listing application that fetches and displays 
+            movies with details. Clean backend architecture with a user-friendly interface.
+          </p>
+          <div class="project-tags">
+            <span>Python</span><span>API</span><span>Backend</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="full-stack">
+          <div class="project-card-top">
+            <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Adheenka/greatcart" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">GreatCart</h3>
+          <p class="project-desc">
+            A full-featured e-commerce web application with product listing, cart management, 
+            and order processing capabilities. Built with JavaScript.
+          </p>
+          <div class="project-tags">
+            <span>JavaScript</span><span>E-commerce</span><span>Frontend</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="backend">
+          <div class="project-card-top">
+            <div class="project-icon"><i class="fas fa-check-circle"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Adheenka/todo-pro" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Todo Pro</h3>
+          <p class="project-desc">
+            A professional-grade task management application with full CRUD operations, 
+            built with Python. Features a clean, modern UI for productivity.
+          </p>
+          <div class="project-tags">
+            <span>Python</span><span>CRUD</span><span>Productivity</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="backend">
+          <div class="project-card-top">
+            <div class="project-icon"><i class="fas fa-cloud-sun"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Adheenka/weather" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Weather App</h3>
+          <p class="project-desc">
+            A weather forecasting application that fetches real-time weather data 
+            using APIs. Built with Python, providing location-based weather insights.
+          </p>
+          <div class="project-tags">
+            <span>Python</span><span>API</span><span>Weather</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="projects-cta">
+        <a href="https://github.com/Adheenka" target="_blank" class="btn btn-outline">
+          <i class="fab fa-github"></i> View All on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section experience-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 04. experience</span>
+        <h2 class="section-title">Work Experience</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Software Engineer</h3>
+              <span class="timeline-company">Odoo Development</span>
+            </div>
+            <div class="timeline-meta">
+              <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2023 – Present</span>
+              <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> India</span>
+            </div>
+            <ul class="timeline-desc">
+              <li>Developing and customizing <strong>Odoo ERP modules</strong> for various business domains</li>
+              <li>Building scalable <strong>Python backends</strong> with clean architecture</li>
+              <li>Creating custom <strong>XLSX/PDF reports</strong> and automation workflows</li>
+              <li>Integrating third-party APIs and services with Odoo</li>
+              <li>Managing <strong>Docker</strong> deployments and containerized environments</li>
+            </ul>
+            <div class="timeline-tech">
+              <span>Python</span><span>Odoo</span><span>Docker</span><span>PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Backend Developer</h3>
+              <span class="timeline-company">Django & React Projects</span>
+            </div>
+            <div class="timeline-meta">
+              <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2022 – 2023</span>
+              <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> India</span>
+            </div>
+            <ul class="timeline-desc">
+              <li>Built full-stack web applications using <strong>Django</strong> and <strong>React</strong></li>
+              <li>Developed RESTful APIs with proper authentication and authorization</li>
+              <li>Implemented e-commerce functionality including cart, orders, and payments</li>
+              <li>Worked with <strong>Docker</strong> for consistent development environments</li>
+            </ul>
+            <div class="timeline-tech">
+              <span>Django</span><span>React</span><span>JavaScript</span><span>Git</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 05. education</span>
+        <h2 class="section-title">My Learning Path</h2>
+      </div>
+      <div class="education-grid">
+        <div class="edu-card">
+          <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="edu-content">
+            <span class="edu-year">2022 – Present</span>
+            <h3 class="edu-degree">Bachelor of Computer Application (BCA)</h3>
+            <p class="edu-institution">GH Raisoni College of Engineering and Management, Nagpur</p>
+            <p class="edu-detail">CGPA: <strong>8.40</strong></p>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon"><i class="fas fa-school"></i></div>
+          <div class="edu-content">
+            <span class="edu-year">2020 – 2022</span>
+            <h3 class="edu-degree">Higher Secondary Education</h3>
+            <p class="edu-institution">NPW Science College, Lakhani</p>
+            <p class="edu-detail">Overall: <strong>70%</strong> | IT: <strong>95%</strong></p>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon"><i class="fas fa-book"></i></div>
+          <div class="edu-content">
+            <span class="edu-year">Up to 2020</span>
+            <h3 class="edu-degree">Secondary Education</h3>
+            <p class="edu-institution">Shivaji Vidyalaya, Seloti/Manegaon</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications / Self Learning -->
+      <div class="learning-section">
+        <h3 class="learning-title"><i class="fas fa-certificate"></i> Self-Learning & Continuous Growth</h3>
+        <div class="learning-tags">
+          <span class="learning-tag"><i class="fab fa-docker"></i> Docker Mastery</span>
+          <span class="learning-tag"><i class="fas fa-cog"></i> Odoo 16/17 Development</span>
+          <span class="learning-tag"><i class="fab fa-python"></i> Advanced Python</span>
+          <span class="learning-tag"><i class="fab fa-react"></i> React & Redux</span>
+          <span class="learning-tag"><i class="fas fa-database"></i> PostgreSQL</span>
+          <span class="learning-tag"><i class="fas fa-code-branch"></i> Git & GitHub Actions</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 06. contact</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">
+          I'm always open to discussing new opportunities, interesting projects, 
+          or just having a chat about tech!
+        </p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-detail">
+              <span class="contact-label">Email</span>
+              <a href="mailto:adheen9961@gmail.com">adheen9961@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+            <div class="contact-detail">
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/mohammed-adheen" target="_blank">in/mohammed-adheen</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <div class="contact-detail">
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/Adheenka" target="_blank">github.com/Adheenka</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-detail">
+              <span class="contact-label">Location</span>
+              <span>India 🇮🇳</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Let's collaborate!" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-name">Mohammed Adheen</p>
+      <p class="footer-tagline">Software Engineer | Python · Odoo · Django · React</p>
+      <div class="footer-social">
+        <a href="https://github.com/Adheenka" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mohammed-adheen" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:adheen9961@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="footer-copy">
+        © <span id="year"></span> Mohammed Adheen. Built with 
+        <i class="fas fa-heart" style="color:#f56565;"></i> and pure code.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
